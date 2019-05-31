@@ -1,0 +1,18 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+        hbm2ddl.import_files: none
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    show-sql: true
+
+api:
+  host: https://openapi.naver.com
+  client:
+    id: 6tp06tC3IjlHwm3kxNgg
+    secret: LVT1M6_M1l
+

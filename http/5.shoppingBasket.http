@@ -1,0 +1,229 @@
+# For a quick start check out our HTTP Requests collection (Tools|HTTP Client|Open HTTP Requests Collection).
+#
+# Following HTTP Request Live Templates are available:
+# * 'gtrp' and 'gtr' create a GET request with or without query parameters;
+# * 'ptr' and 'ptrp' create a POST request with a simple or parameter-like body;
+# * 'mptr' and 'fptr' create a POST request to submit a form with a text or file field (multipart/form-data);
+
+### 장바구니 조회 실패(없는 구매자)
+GET http://localhost:8080/shopping-basket
+Accept: application/json
+user-id: hojin.lee1
+
+### 장바구니 조회 (비어있는 장바구니)
+GET http://localhost:8080/shopping-basket
+Accept: application/json
+user-id: hojin.lee
+
+### 책 1 찜 실패(없는 구매자)
+POST http://localhost:8080/reservation
+Content-Type: application/json
+user-id: hojin.lee1
+
+{
+  "bookId": "1"
+}
+
+### 책 100 찜 실패(없는 책)
+POST http://localhost:8080/reservation
+Content-Type: application/json
+user-id: hojin.lee
+
+{
+  "bookId": "100"
+}
+
+### 책 1 찜 성공
+POST http://localhost:8080/reservation
+Content-Type: application/json
+user-id: hojin.lee
+
+{
+  "bookId": "1"
+}
+
+### 책 1 찜 실패(이미 예약)
+POST http://localhost:8080/reservation
+Content-Type: application/json
+user-id: hojin.lee
+
+{
+  "bookId": "1"
+}
+
+### 책 2 찜 성공
+POST http://localhost:8080/reservation
+Content-Type: application/json
+user-id: hojin.lee
+
+{
+  "bookId": "2"
+}
+
+### 책 3 찜 성공
+POST http://localhost:8080/reservation
+Content-Type: application/json
+user-id: hojin.lee
+
+{
+  "bookId": "3"
+}
+
+### 장바구니 조회 (배송비 존재)
+GET http://localhost:8080/shopping-basket
+Accept: application/json
+user-id: hojin.lee
+
+### 책 4 찜 성공
+POST http://localhost:8080/reservation
+Content-Type: application/json
+user-id: hojin.lee
+
+{
+  "bookId": "4"
+}
+
+### 장바구니 조회 (배송비 미존재)
+GET http://localhost:8080/shopping-basket
+Accept: application/json
+user-id: hojin.lee
+
+### 책 5 찜 성공
+POST http://localhost:8080/reservation
+Content-Type: application/json
+user-id: hojin.lee
+
+{
+  "bookId": "5"
+}
+
+### 장바구니 조회 (추가 5% 할인)
+GET http://localhost:8080/shopping-basket
+Accept: application/json
+user-id: hojin.lee
+
+### 책 6 찜 성공
+POST http://localhost:8080/reservation
+Content-Type: application/json
+user-id: hojin.lee
+
+{
+  "bookId": "6"
+}
+
+### 책 7 찜 성공
+POST http://localhost:8080/reservation
+Content-Type: application/json
+user-id: hojin.lee
+
+{
+  "bookId": "7"
+}
+
+### 책 8 찜 성공
+POST http://localhost:8080/reservation
+Content-Type: application/json
+user-id: hojin.lee
+
+{
+  "bookId": "8"
+}
+
+### 책 9 찜 성공
+POST http://localhost:8080/reservation
+Content-Type: application/json
+user-id: hojin.lee
+
+{
+  "bookId": "9"
+}
+
+### 책 10 찜 성공
+POST http://localhost:8080/reservation
+Content-Type: application/json
+user-id: hojin.lee
+
+{
+  "bookId": "10"
+}
+
+### 책 11 찜 성공
+POST http://localhost:8080/reservation
+Content-Type: application/json
+user-id: hojin.lee
+
+{
+  "bookId": "11"
+}
+
+### 책 12 찜 성공
+POST http://localhost:8080/reservation
+Content-Type: application/json
+user-id: hojin.lee
+
+{
+  "bookId": "12"
+}
+
+### 책 13 찜 성공
+POST http://localhost:8080/reservation
+Content-Type: application/json
+user-id: hojin.lee
+
+{
+  "bookId": "13"
+}
+
+### 책 14 찜 성공
+POST http://localhost:8080/reservation
+Content-Type: application/json
+user-id: hojin.lee
+
+{
+  "bookId": "14"
+}
+
+### 책 15 찜 성공
+POST http://localhost:8080/reservation
+Content-Type: application/json
+user-id: hojin.lee
+
+{
+  "bookId": "15"
+}
+
+### 책 16 찜 실패(15권 넘음 안됨)
+POST http://localhost:8080/reservation
+Content-Type: application/json
+user-id: hojin.lee
+
+{
+  "bookId": "16"
+}
+
+### 장바구니 조회 (15권)
+GET http://localhost:8080/shopping-basket
+Accept: application/json
+user-id: hojin.lee
+
+### 책 16 찜 삭제 실패(없는 구매자)
+DELETE http://localhost:8080/reservation/16
+Content-Type: application/json
+user-id: hojin.lee1
+
+### 책 16 찜 삭제 실패 (등록이 안되어있음)
+DELETE http://localhost:8080/reservation/16
+Content-Type: application/json
+user-id: hojin.lee
+
+### 책 13 찜 삭제
+DELETE http://localhost:8080/reservation/13
+Content-Type: application/json
+user-id: hojin.lee
+
+### 장바구니 조회 (14권)a
+GET http://localhost:8080/shopping-basket
+Accept: application/json
+user-id: hojin.lee
+
+###

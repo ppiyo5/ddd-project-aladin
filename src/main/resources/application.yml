@@ -1,0 +1,20 @@
+spring.h2:
+  console:
+    enabled: true
+    path: /console
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+
+api:
+  host: https://openapi.naver.com
+  client:
+    id: 6tp06tC3IjlHwm3kxNgg
+    secret: LVT1M6_M1l
